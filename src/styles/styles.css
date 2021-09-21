@@ -1,0 +1,8 @@
+@import url('./base/reset.css');
+@import url('./base/config.css');
+@import url('./base/base.css');
+
+@import url('./pages/home-page.css');
+
+
+@import url('./components/shared/side-bar.css');

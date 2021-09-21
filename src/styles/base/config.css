@@ -1,0 +1,23 @@
+
+:root{
+
+    /* COLORS */
+    --gray: rgb(150, 167, 175);
+    --green: rgb(61, 213, 152);
+    --green-dark: rgb(26, 40, 47);
+    --green-soft-dark: rgb(34, 52, 60);
+    --red: rgb(255, 87, 95);
+    --white:hsl(0, 0%, 100%);
+    --yellow: rgb(255, 197, 66);
+
+    /* COLORS VARIABLES */
+
+    --color-primary: var(--green);
+    --color-primary-dark: var(--green-dark);
+    --color-primary-soft-dark: var(--green-soft-dark);
+    --color-gray: var(--gray);
+
+    --color-bg-main: var(--color-primary-dark);
+    --color-bg-components: var(--color-primary-soft-dark);
+
+}

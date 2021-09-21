@@ -1,0 +1,12 @@
+.sidebar {
+    border-right: 1px solid var(--color-primary-soft-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 24px 48px;
+    width: 225px;
+}
+
+.sidebar__logo {
+    margin-left: 50px;
+}
