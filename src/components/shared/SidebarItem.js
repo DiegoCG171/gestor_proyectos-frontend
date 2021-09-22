@@ -8,11 +8,14 @@ export const SidebarItem = ({
 }) => {
 
     return (
-        <div className="sidebar_item" >
+        <div className="sidebar__item" >
             {
-                icon === 'home' && <FaHome />
+                icon === 'home' ? <FaHome className='sidebar__item-icon'/> :
+                icon === 'users' ? <FaUsers className='sidebar__item-icon' /> :
+                icon === 'suitcase' ? <FaSuitcase className='sidebar__item-icon' /> : 
+                <FaUserTie className='sidebar__item-icon' /> 
             }
-            <p>{title}</p>
+            <p className='sidebar__item-title' >{title}</p>
         </div>
     )
 }

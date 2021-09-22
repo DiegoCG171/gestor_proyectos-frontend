@@ -6,7 +6,10 @@ export const Sidebar = () => {
     return (
         <div className="sidebar" >
             <div className="sidebar__logo">
-                <img src="https://res.cloudinary.com/dmfhnhyyj/image/upload/v1632264359/pyjc/P_JC_LOGO_1_hizbhf.png" />
+                <img 
+                    src="https://res.cloudinary.com/dmfhnhyyj/image/upload/v1632264359/pyjc/P_JC_LOGO_1_hizbhf.png"
+                    alt="Logo-PyJC"
+                    />
             </div>
             {
                 sideBarData.map( sideItem => {

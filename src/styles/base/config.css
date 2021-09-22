@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 :root{
 
@@ -18,6 +19,12 @@
     --color-gray: var(--gray);
 
     --color-bg-main: var(--color-primary-dark);
+    --color-bg-primary: var(--color-primary);
     --color-bg-components: var(--color-primary-soft-dark);
 
+    --color-font-primary: var(--white);
+    --color-font-secundary: var(--color-gray);
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }

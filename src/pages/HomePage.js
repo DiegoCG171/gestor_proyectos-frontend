@@ -5,7 +5,6 @@ export const HomePage = () => {
     return (
         <div className="home" >
             <Sidebar />
-
         </div>
     )
 }

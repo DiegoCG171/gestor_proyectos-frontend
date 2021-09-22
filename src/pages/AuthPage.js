@@ -1,9 +1,10 @@
 import React from 'react'
+import { LoginForm } from '../components/auth/LoginForm'
 
 export const AuthPage = () => {
     return (
-        <div>
-            <h1>Auth Page</h1>
+        <div className="auth" >
+            <LoginForm />
         </div>
     )
 }

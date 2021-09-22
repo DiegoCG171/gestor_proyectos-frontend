@@ -3,8 +3,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Redirect
-  } from "react-router-dom";
+    Redirect,
+} from "react-router-dom";
 import { AuthPage } from '../pages/AuthPage';
 import { HomePage } from '../pages/HomePage';
 
@@ -13,9 +13,9 @@ export const RouterApp = () => {
         <Router>
             <div>
                 <Switch>
-                    <Route exact path="/" component={HomePage} />
                     <Route path="/auth" component={AuthPage} />
-                    <Redirect to="/" />
+                    <Route exact path="/home" component={HomePage} />
+                    <Redirect to="/auth" />
                 </Switch>
             </div>
         </Router>

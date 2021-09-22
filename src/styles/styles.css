@@ -3,6 +3,7 @@
 @import url('./base/base.css');
 
 @import url('./pages/home-page.css');
-
+@import url('./pages/auth-page.css');
 
 @import url('./components/shared/side-bar.css');
+@import url('./components/auth/form-login.css');
