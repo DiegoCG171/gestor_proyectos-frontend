@@ -1,0 +1,26 @@
+.home{
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.home-content {
+    color: var(--color-font-primary);
+    width: 100%;
+    padding-top: 80px;
+    padding-left: 24px;
+    max-width: 100%;
+}
+
+.home__areas-list {
+    display: flex;
+    overflow-x: auto;
+}
+
+.home__areas-list > .card-area {
+    margin-left: 24px;
+}
+
+.home__areas-list > .card-area:first-child, :last-child {
+    margin-left: 0;
+}

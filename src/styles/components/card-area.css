@@ -1,0 +1,118 @@
+
+.card-area{
+    align-items: center;
+    background: var(--color-bg-components);
+    border-radius: 8px;
+    box-shadow: 2px 8px 8px #19282F;
+    color: var(--color-font-secundary);
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    margin-top: 24px;
+    padding: 24px 0;
+    min-width: 178px;
+    max-width: 178px;
+}
+
+.card-area__info{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.card-area__title {
+    font-weight: bold;
+    color: var(--color-font-primary);
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.card-area__subtitle {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.card-area__stat{
+    font-size: 10px;
+}
+
+.button-outline {
+    background: none;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    color: var(--color-font-primary);
+    cursor: pointer;
+    padding: 4px 24px;
+    width: fit-content;
+}
+
+.card-area__graph-wrapper{
+    align-items: center;
+    display: flex;
+    fill: none;
+    height: 120px;
+    justify-content: center;
+    width: 120px;
+}
+
+.card-area__percent{
+    color: var(--color-font-primary);
+    font-weight: bold;
+    position: absolute;
+}
+
+.card-area__graph-rail,
+.card-area__graph-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 120px;
+}
+
+circle {
+    width: 100%;
+    stroke-width: 22px;
+}
+
+.card-area__graph-rail {
+    z-index: 1;
+}
+
+.card-area__graph-bar {
+    transform: rotate(-90deg);
+    z-index: 2;
+}
+
+.card-area__graph-rail > circle {
+    stroke: var(--color-bg-main);
+}
+
+.card-area__graph-bar > circle {
+    stroke: var(--color-primary);
+    stroke-linecap: round;
+    stroke-dasharray: 628 628;
+    stroke-dashoffset: 0;
+    animation: load 5s infinite;
+}
+
+@keyframes load {
+    0% {
+        stroke-dashoffset: 628;
+        stroke: var(--red);
+    }
+    25%{
+        stroke: var(--red);
+    }
+    50%{
+        stroke: var(--yellow);
+    }
+    70%{
+        stroke: var(--green);
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
