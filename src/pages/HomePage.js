@@ -1,9 +1,15 @@
 import React from 'react'
 import { cardAreaData } from '../components/cardAreaData';
 import { CardAreas } from '../components/CardAreas';
+import { CardProject } from '../components/cardProjects/CardProject';
 import { Sidebar } from '../components/shared/Sidebar'
 
 export const HomePage = () => {
+
+    cardAreaData.sort( (a, b ) => {
+        return  b.percentage - a.percentage ;
+    });
+
     return (
         <div className="home" >
             <Sidebar />
@@ -16,6 +22,9 @@ export const HomePage = () => {
                         })
                     }
                 </div>
+                <section className="home__section">
+                    <CardProject />
+                </section>
             </main>
         </div>
     );

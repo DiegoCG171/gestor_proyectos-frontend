@@ -74,7 +74,7 @@
 
 circle {
     width: 100%;
-    stroke-width: 22px;
+    stroke-width: 20px;
 }
 
 .card-area__graph-rail {
@@ -91,11 +91,9 @@ circle {
 }
 
 .card-area__graph-bar > circle {
-    stroke: var(--color-primary);
     stroke-linecap: round;
     stroke-dasharray: 628 628;
-    stroke-dashoffset: 0;
-    animation: load 5s infinite;
+    transition: stroke-dashoffset 3s;
 }
 
 @keyframes load {

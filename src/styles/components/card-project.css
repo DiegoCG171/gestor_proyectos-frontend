@@ -1,0 +1,16 @@
+
+.card-project {
+    background-color: var(--color-bg-components);
+    border-radius: 8px;
+    margin-top: 24px;
+    max-width: 54%;
+    padding: 22px;
+    padding-top: 24px;
+}
+
+.card-project__item {
+    background-color: var(--color-bg-main);
+    border-radius: 8px;
+    padding: 12px 32px;
+    margin-bottom: 24px;
+}

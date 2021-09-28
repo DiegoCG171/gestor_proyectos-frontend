@@ -11,3 +11,8 @@ body {
     font-weight: bold;
 }
 
+.card-title {
+    margin-bottom: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}

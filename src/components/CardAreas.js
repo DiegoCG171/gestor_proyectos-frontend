@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 
 export const CardAreas = ({
     percentage,
@@ -6,6 +6,28 @@ export const CardAreas = ({
     subtitle,
     stat
 }) => {
+
+    const [currentPercentage, setcurrentPercentage] = useState(628);
+    const [counterPercentage, setcounterPercentage] = useState(0);
+
+
+    useEffect(() => {
+        setcurrentPercentage( 628 - (628 * (percentage / 100)) );
+    }, []);
+
+    
+
+    let color;
+
+    if( currentPercentage >= 420.76 ){
+        color = 'var(--red)';
+    } else if( currentPercentage < 420.76 && currentPercentage >= 214.53 ){
+        color = 'var(--yellow)';
+    } else {
+        color = 'var(--green)';
+    }
+
+
     return (
         <div className="card-area" >
             <div className="card-area__graph-wrapper" >
@@ -20,7 +42,12 @@ export const CardAreas = ({
                     className="card-area__graph-bar"
                     viewBox="0 0 240 240"
                 >
-                    <circle cx="120" cy="120" r="100" />
+                    <circle 
+                        cx="120" 
+                        cy="120" 
+                        r="100" 
+                        style={{'strokeDashoffset': currentPercentage, 'stroke':  color}}
+                    />
                 </svg>
             </div>
             <div className="card-area__info">
