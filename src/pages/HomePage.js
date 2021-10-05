@@ -1,4 +1,5 @@
 import React from 'react'
+import { CardAlerts } from '../components/cardAlerts/CardAlerts';
 import { cardAreaData } from '../components/cardAreaData';
 import { CardAreas } from '../components/CardAreas';
 import { CardProject } from '../components/cardProjects/CardProject';
@@ -24,6 +25,7 @@ export const HomePage = () => {
                 </div>
                 <section className="home__section">
                     <CardProject />
+                    <CardAlerts />
                 </section>
             </main>
         </div>

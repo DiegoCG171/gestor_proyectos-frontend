@@ -3,7 +3,7 @@ export const sideBarData = [
     {
         "id": 0,
         "icon": "home",
-        "title": "Home"
+        "title": "Home", 
     },
     {
         "id": 1,

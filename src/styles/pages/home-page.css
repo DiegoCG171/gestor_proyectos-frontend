@@ -12,6 +12,11 @@
     max-width: 100%;
 }
 
+.home__section {
+    display: flex;
+    justify-content: space-between;
+}
+
 .home__areas-list {
     display: flex;
     overflow-x: auto;

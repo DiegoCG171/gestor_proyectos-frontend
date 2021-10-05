@@ -8,12 +8,10 @@ export const CardAreas = ({
 }) => {
 
     const [currentPercentage, setcurrentPercentage] = useState(628);
-    const [counterPercentage, setcounterPercentage] = useState(0);
-
 
     useEffect(() => {
         setcurrentPercentage( 628 - (628 * (percentage / 100)) );
-    }, []);
+    }, [percentage]);
 
     
 
