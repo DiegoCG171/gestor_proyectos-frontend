@@ -18,7 +18,7 @@ export const CardProjectItem = ({
             </svg>
             <svg
                     className="card-project__graph-bar"
-                    viewBox="0 100% 240 24"
+                    viewBox="0 100 240 24"
             >
                 <rect x="50" y="20" width="120" height="24"
                     style={{"fill": "var(--green)"}} />

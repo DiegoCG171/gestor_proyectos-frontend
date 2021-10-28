@@ -1,6 +1,6 @@
 
 const initialState = {
-
+    cheking: true
 }
 
 export const authReducer = (state= initialState, action) => {

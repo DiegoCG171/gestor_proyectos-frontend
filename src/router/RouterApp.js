@@ -18,7 +18,7 @@ export const RouterApp = () => {
                     <Redirect to="/auth" />
                 </Switch>
             </div>
-        </Router>
+        </Router> 
     )
 }
 

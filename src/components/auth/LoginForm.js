@@ -1,20 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { startLogin } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
 
 
 export const LoginForm = () => {
 
+    const dispatch = useDispatch();
 
     const [formValues, handleInputChange] = useForm({
-        email: 'test@gmail.com',
-        password: '12345678'
+        email: "frias.jorge@pyjcsystem.com.mx",
+        password: "123456"
     });
 
     const { email, password } = formValues;
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        dispatch(startLogin(email, password));
     }
 
     return (
@@ -42,12 +46,11 @@ export const LoginForm = () => {
                     value={password}
                     placeholder="Contraseña"
                 />
-                <Link
-                    to="/home"
+                <button
                     className="form__button"
                 >
                     Ingresar
-                </Link>
+                </button>
             </form>
         </div>
     )
