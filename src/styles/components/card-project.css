@@ -14,32 +14,8 @@
     display: flex;
     background-color: var(--color-bg-main);
     border-radius: 8px;
-    padding: 12px 32px;
+    padding: 24px 32px;
     margin-bottom: 24px;
-    justify-content: space-between;
 }
 
-.card-project__graph-wrapper {
-    align-items: center;
-    display: flex;
-    fill: none;
-    height: 12px;
-    justify-content: flex-start;
-    width: 50%;
-}
 
-.card-project__graph-rail {
-    display: flex;
-    height: 24px;
-    justify-content: flex-start;
-    position: absolute;
-    width: 240px;
-    z-index: 1;
-}
-
-.card-project__graph-bar {
-    height: 24px;
-    position: absolute;
-    width: 240px;
-    z-index: 2;
-}

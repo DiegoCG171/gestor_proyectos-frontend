@@ -7,5 +7,10 @@ export const types = {
     authStartRenewToken: '[auth] Start renew token',
     authLogout: '[auth] Logout',
 
-    areasLoaded: '[areas] Loaded areas'
+    areasLoaded: '[areas] Loaded areas',
+
+
+    projectsQALoaded: '[projectsQA] Loaded projects QA',
+
+    resourcesLoaded: '[resources] Loaded resources'
 }

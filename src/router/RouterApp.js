@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { startChecking } from '../actions/auth';
 import { AuthPage } from '../pages/AuthPage';
-import { HomePage } from '../pages/HomePage';
+import { DashboardApp } from './DashboardApp';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
@@ -31,15 +31,15 @@ export const RouterApp = () => {
             <div>
                 <Switch>
                     
-                    <PublicRoute 
+                    <PublicRoute
+                        exact
                         path="/auth" 
                         component={AuthPage}
                         isAuthenticated={ !!uid } 
                     />
                     <PrivateRoute 
-                        exact 
-                        path="/home" 
-                        component={HomePage}
+                        path="/" 
+                        component={ DashboardApp }
                         isAuthenticated={ !!uid } 
                     />
                     <Redirect to="/auth" />

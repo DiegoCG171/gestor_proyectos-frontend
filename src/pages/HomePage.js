@@ -1,20 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { startAreasLoading } from '../actions/areas';
 import { CardAlerts } from '../components/cardAlerts/CardAlerts';
 import { CardAreas } from '../components/CardAreas';
 import { CardProject } from '../components/cardProjects/CardProject';
 import { Sidebar } from '../components/shared/Sidebar'
 
 export const HomePage = () => {
-
-    const dispatch = useDispatch();
-
-    useEffect(() =>{
-        dispatch( startAreasLoading());
-    },[dispatch]);
-
+    
     const {areas} = useSelector(state => state.areas);
 
     areas.sort( (a, b ) => {
