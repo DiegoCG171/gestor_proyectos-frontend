@@ -17,7 +17,7 @@
     padding: 16px;
     cursor: pointer;
     border-radius: 8px;
-    width: 160px;
+    width: 140px;
 }
 
 .sidebar__item:hover{
@@ -35,4 +35,14 @@
 .sidebar__item-title {
     color: var(--color-font-primary);
     margin-left: 12px;
+}
+
+.sidebar__logout {
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    padding: 8px 16px;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 24px;
 }
