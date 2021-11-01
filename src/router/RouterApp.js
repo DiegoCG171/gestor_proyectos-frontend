@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { startCheckig } from '../actions/auth';
 import { AuthPage } from '../pages/AuthPage';
+import { LoadingPage } from '../pages/LoadingPage';
 import { Dashboard } from './Dashboard';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
@@ -23,7 +24,7 @@ export const RouterApp = () => {
     },[dispatch]);
 
     if (loading) {
-        return <h1>Espere</h1>
+        return <LoadingPage />
     }
 
     return (

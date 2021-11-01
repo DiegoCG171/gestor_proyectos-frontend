@@ -1,0 +1,42 @@
+.loader-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.loader {
+    height: 50px;
+    transform-origin: bottom center;
+    animation: rotate 3s linear infinite;
+}
+
+.circle {
+    display: inline-block;
+    background-color: var(--green);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: grow 2s linear infinite;
+    margin: -40px;
+}
+
+.circle:nth-child(2) {
+    background-color: #025951;
+    animation-delay: 1s;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1);
+    }
+}
