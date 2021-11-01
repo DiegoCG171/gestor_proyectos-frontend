@@ -14,12 +14,17 @@ import { PublicRoute } from './PublicRoute';
 export const RouterApp = () => {
     
     const { uid } = useSelector(state => state.auth);
-    
+    const { loading } = useSelector(state => state.ui);
+
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch( startCheckig());
-    },[dispatch])
+    },[dispatch]);
+
+    if (loading) {
+        return <h1>Espere</h1>
+    }
 
     return (
         <Router>

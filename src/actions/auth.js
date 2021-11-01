@@ -1,10 +1,14 @@
 import { fetchWithoutToken, fetchWithToken } from "../helpers/fecth"
 import { types } from "../types/types";
+import { clearedAreas } from "./areas";
+import { clearedProjectsQA } from "./projectsQA";
+import { clearedResources } from "./resources";
+import { finishLoading } from "./ui";
 
 
 export const startLogin = ( email, password ) => {
     return async( dispatch ) => {
-
+        
         const resp = await fetchWithoutToken('auth', { email, password}, 'POST');
         const body = await resp.json();
 
@@ -18,6 +22,8 @@ export const startLogin = ( email, password ) => {
                 role: body.user.role
             }));
         }
+
+        dispatch( finishLoading());
 
     }
 }
@@ -40,7 +46,25 @@ export const startCheckig = () => {
                 name: body.name,
                 role: body.role
             }));
-        }
 
+        } else {
+            dispatch(finishChecking());
+        }
     }
 }
+
+
+export const startLogout = () => {
+    return async( dispatch ) => {
+        localStorage.clear();
+        dispatch( clearedAreas() );
+        dispatch( clearedProjectsQA() );
+        dispatch( clearedResources() );
+        dispatch( logout() );
+    };
+};
+
+export const finishChecking = () => ({ type: types.authCheckingFinish });
+
+
+const logout = () => ({ type: types.authLogout});
