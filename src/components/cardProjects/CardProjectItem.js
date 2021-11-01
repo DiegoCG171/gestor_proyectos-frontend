@@ -1,29 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const CardProjectItem = ({
-    title,
-    date
+    code,
+    name,
+    percentage
 }) => {
+
+    const [currentPercentage, setCurrentPercentage] = useState(0);
+
+    useEffect(()=>{
+        setCurrentPercentage(percentage);
+    },[percentage])
+
+    let color = '';
+
+    if (currentPercentage <= 35 ) {
+        color = 'var(--red)';
+    } else if (currentPercentage > 45 && currentPercentage <= 70 ) {
+        color = 'var(--yellow)';
+    } else {
+        color = 'var(--green)';
+    }
+
     return (
         <div className="card-project__item" >
-            <span>{date}</span>
-            <span>{title}</span>
-            <div className="card-project__graph-wrapper" >
-            <svg
-                    className="card-project__graph-rail"
-                    viewBox="0 0 240 24"
-            >
-                <rect x="50" y="20"  width="240" height="24"
-                    style={{"fill": "var(--gray)"}} />
-            </svg>
-            <svg
-                    className="card-project__graph-bar"
-                    viewBox="0 100 240 24"
-            >
-                <rect x="50" y="20" width="120" height="24"
-                    style={{"fill": "var(--green)"}} />
-            </svg>
+            <div className="card-project__item-info" >
+                <p className="card-project__item-code" >{code}</p>
+                <p className="card-project__item-name" >{name}</p>
             </div>
+            <div className="card-project__item-rail" >
+                <div className="card-project__item-bar" style={{ width: `${currentPercentage}%`, backgroundColor: color }} />
+            </div>
+            <small className="card-project__item-percentage" >{ percentage }%</small>
         </div>
     )
 }

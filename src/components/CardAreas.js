@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 export const CardAreas = ({
     percentage,
-    title,
-    subtitle,
+    name,
+    leader,
     stat
 }) => {
 
@@ -49,8 +49,8 @@ export const CardAreas = ({
                 </svg>
             </div>
             <div className="card-area__info">
-                <p className="card-area__title">{title}</p>
-                <p className="card-area__subtitle" >{subtitle}</p>
+                <p className="card-area__title">{name}</p>
+                <p className="card-area__subtitle" >{leader}</p>
                 <p className="card-area__stat" >{stat}</p>
             </div>
             <button className="button-outline">Ver todo</button>

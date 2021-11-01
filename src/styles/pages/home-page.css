@@ -5,16 +5,16 @@
 }
 
 .home-content {
+    display: flex;
     color: var(--color-font-primary);
-    width: 100%;
     padding-top: 80px;
     padding-left: 24px;
-    max-width: 100%;
+    flex-direction: column;
+    width: 100vw;
 }
 
 .home__section {
     display: flex;
-    justify-content: space-between;
 }
 
 .home__areas-list {

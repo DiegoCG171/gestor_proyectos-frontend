@@ -1,25 +1,25 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { CardAlerts } from '../components/cardAlerts/CardAlerts';
-import { cardAreaData } from '../components/cardAreaData';
 import { CardAreas } from '../components/CardAreas';
 import { CardProject } from '../components/cardProjects/CardProject';
-import { Sidebar } from '../components/shared/Sidebar'
 
 export const HomePage = () => {
 
-    cardAreaData.sort( (a, b ) => {
+    const {areas} = useSelector(state => state.areas);
+
+    areas.sort( (a, b ) => {
         return  b.percentage - a.percentage ;
     });
 
     return (
         <div className="home" >
-            <Sidebar />
             <main className="home-content">
                 <h2 className="title" >Áreas</h2>
                 <div className="home__areas-list">
                     {
-                        cardAreaData.map( card => {
-                            return <CardAreas key={card.id} {...card} />
+                        areas.map( card => {
+                            return <CardAreas key={card._id} {...card} />
                         })
                     }
                 </div>

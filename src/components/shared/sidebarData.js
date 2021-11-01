@@ -3,21 +3,25 @@ export const sideBarData = [
     {
         "id": 0,
         "icon": "home",
-        "title": "Home", 
+        "title": "Home",
+        "link": "/home"
     },
     {
         "id": 1,
         "icon": "users",
-        "title": "Área"
+        "title": "Áreas",
+        "link": "/areas"
     },
     {
         "id": 2,
         "icon": "suitcase",
-        "title": "Proyectos"
+        "title": "Proyectos",
+        "link": "/projectsQA"
     },
     {   
         "id": 3,
         "icon": "usertie",
-        "title": "Recursos"
+        "title": "Recursos",
+        "link": "/resources"
     }
 ]

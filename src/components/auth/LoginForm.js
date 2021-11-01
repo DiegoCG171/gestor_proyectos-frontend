@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { startLogin } from '../../actions/auth';
+import { startLoading } from '../../actions/ui';
 import { useForm } from '../../hooks/useForm';
 
 
@@ -19,6 +20,7 @@ export const LoginForm = () => {
         event.preventDefault();
 
         dispatch(startLogin(email, password));
+        dispatch( startLoading());
     }
 
     return (
