@@ -33,10 +33,7 @@ export const startDeleteArea = (id) => {
         // const resp = await fetchWithToken(`areas/${ id }, {}, 'DELETE'`);
         // const body = await resp.json();
 
-        console.log(id)
-
         dispatch( areaDeleted(id));
-
     }
 }
 
@@ -62,4 +59,4 @@ export const startUpdateArea = ( id, area) => {
     }
 }
 
-const areaUpdated = (area) => ({type: types.areasUpdated, payload: area})
+const areaUpdated = (area) => ({type: types.areasUpdated, payload: area});

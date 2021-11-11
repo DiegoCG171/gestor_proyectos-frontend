@@ -23,7 +23,10 @@ export const startLogin = ( email, password ) => {
             }));
         }
 
-        dispatch( finishLoading());
+        setTimeout(() => {
+            dispatch( finishLoading());
+        }, 3500);
+
 
     }
 }
@@ -47,8 +50,11 @@ export const startCheckig = () => {
                 role: body.role
             }));
 
+                dispatch(finishChecking());
+
+
         } else {
-            dispatch(finishChecking());
+                dispatch(finishChecking());
         }
     }
 }
