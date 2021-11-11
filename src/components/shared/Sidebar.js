@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { startLogout } from '../../actions/auth';
 import { sideBarData } from './sidebarData';
 import { SidebarItem } from './SidebarItem';
+import { startLogout } from '../../actions/auth';
 
 export const Sidebar = () => {
     

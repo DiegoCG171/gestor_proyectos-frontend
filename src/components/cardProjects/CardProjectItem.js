@@ -24,6 +24,7 @@ export const CardProjectItem = ({
 
     return (
         <div className="card-project__item" >
+<<<<<<< HEAD
             <div className="card-project__item-info" >
                 <p className="card-project__item-code" >{code}</p>
                 <p className="card-project__item-name" >{name}</p>
@@ -32,6 +33,10 @@ export const CardProjectItem = ({
                 <div className="card-project__item-bar" style={{ width: `${currentPercentage}%`, backgroundColor: color }} />
             </div>
             <small className="card-project__item-percentage" >{ percentage }%</small>
+=======
+            <span>{date}</span>
+            <span>{title}</span>
+>>>>>>> main
         </div>
     )
 }

@@ -5,6 +5,8 @@ import { CardAreas } from '../components/CardAreas';
 import { CardProject } from '../components/cardProjects/CardProject';
 
 export const HomePage = () => {
+    
+    const {areas} = useSelector(state => state.areas);
 
     const {areas} = useSelector(state => state.areas);
 

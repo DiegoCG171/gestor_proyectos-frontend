@@ -4,7 +4,7 @@ export const CardAreas = ({
     percentage,
     name,
     leader,
-    stat
+    _id
 }) => {
 
     const [currentPercentage, setcurrentPercentage] = useState(628);
@@ -51,7 +51,7 @@ export const CardAreas = ({
             <div className="card-area__info">
                 <p className="card-area__title">{name}</p>
                 <p className="card-area__subtitle" >{leader}</p>
-                <p className="card-area__stat" >{stat}</p>
+                {/* <p className="card-area__stat" >{stat}</p> */}
             </div>
             <button className="button-outline">Ver todo</button>
         </div>
