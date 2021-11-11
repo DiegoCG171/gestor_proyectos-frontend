@@ -8,7 +8,6 @@ export const HomePage = () => {
     
     const {areas} = useSelector(state => state.areas);
 
-    const {areas} = useSelector(state => state.areas);
 
     areas.sort( (a, b ) => {
         return  b.percentage - a.percentage ;
