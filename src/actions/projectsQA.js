@@ -7,7 +7,8 @@ export const projectsQAStartLoading = () => {
 
         try {
             
-            const resp = await fetchWithToken('qaProjects');
+            //TODO: cambiar endpoint
+            const resp = await fetchWithToken('qaProjectsTemp');
             const body = await resp.json();
 
             const dateEnd = moment(body.projects[0].dateEnd).toDate();
@@ -23,6 +24,28 @@ export const projectsQAStartLoading = () => {
     }
 }
 
+export const startProjectsCreated = (project) => {
+    return async( dispatch ) => {
+        try {
+            
+            const resp = await fetchWithToken('qaProjectsTemp', project, 'POST');
+            const body = await resp.json();
+
+            project = {
+                _id: body.project._id,
+                ...project
+            }
+
+            dispatch(projectCreated( project ))
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+
+const projectCreated = ( project ) => ({type: types.projectsQACreated, payload: project})
+
 
 const projectsQALoaded = ( projectsQA ) => ({ 
     type: types.projectsQALoaded ,
@@ -34,6 +57,12 @@ export const clearedProjectsQA = () => ({type: types.projectsQACleared });
 
 export const startProjectQADelete = (id) => {
     return async( dispatch ) => {
+
+        const resp = await fetchWithToken(`qaProjectsTemp/${id}`, {} ,'DELETE');
+        const body = await resp.json();
+
+        console.log(body);
+
         dispatch( projectsQADeleted(id) )
     }
 }

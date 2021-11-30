@@ -25,6 +25,14 @@ export const projectsQAReducer = ( state = initialState, action) => {
                     p => p._id !== action.payload
                 )
             }
+        case types.projectsQACreated:
+            return {
+                ...state,
+                projects: [
+                    action.payload,
+                    ...state.projects
+                ]
+            }
         
         default:
             return state;
