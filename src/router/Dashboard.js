@@ -12,6 +12,7 @@ import { resourcesAllStartLoading } from '../actions/resources';
 import { Sidebar } from '../components/shared/Sidebar';
 import { AreasPage } from '../pages/AreasPage';
 import { HomePage } from '../pages/HomePage';
+import { ProjectsQA } from '../pages/ProjectsQA';
 import { ProjectsQAPage } from '../pages/ProjectsQAPage';
 import { ResourcesPage } from '../pages/ResourcesPage';
 
@@ -39,7 +40,7 @@ export const Dashboard = () => {
                     <Route exact path="/home" component={HomePage} />
                     <Route exact path="/areas" component={AreasPage} />
                     <Route exact path="/resources" component={ResourcesPage} />
-                    <Route exact path="/projectsQA" component={ProjectsQAPage} />
+                    <Route exact path="/projectsQA" component={ProjectsQAPage } />
                     <Redirect to="/home" />
                 </Switch>
             </div>

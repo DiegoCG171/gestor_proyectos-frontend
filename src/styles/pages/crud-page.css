@@ -3,6 +3,8 @@
     width: 100%;
     height: 100%;
     padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 .crud-nav {

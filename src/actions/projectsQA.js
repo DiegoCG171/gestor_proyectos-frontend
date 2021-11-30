@@ -1,5 +1,6 @@
+import moment from "moment";
 import { fetchWithToken } from "../helpers/fecth";
-import { types } from "../types/types"
+import { types } from "../types/types";
 
 export const projectsQAStartLoading = () => {
     return async( dispatch ) => {
@@ -8,6 +9,10 @@ export const projectsQAStartLoading = () => {
             
             const resp = await fetchWithToken('qaProjects');
             const body = await resp.json();
+
+            const dateEnd = moment(body.projects[0].dateEnd).toDate();
+
+            console.log( dateEnd )
 
             dispatch( projectsQALoaded( body.projects ));
 
