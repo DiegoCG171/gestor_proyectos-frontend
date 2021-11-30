@@ -26,4 +26,5 @@ export const types = {
     projectsQALoaded: '[projectsQA] Loaded projects QA',
     projectsQACleared: '[projectsQA] Cleared projects QA',
     projectsQADeleted: '[projectsQA] Deleted projects QA',
+    projectsQACreated: '[projectsQA] Created projects QA',
 }

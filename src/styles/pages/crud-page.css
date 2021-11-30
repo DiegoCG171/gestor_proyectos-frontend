@@ -3,6 +3,8 @@
     width: 100%;
     height: 100%;
     padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 .crud-nav {
@@ -108,6 +110,10 @@
     cursor: pointer;
 }
 
+.crud-modal__button-cancel:hover {
+    background-color: var(--red);
+}
+
 .crud-modal__button-accept {
     background-color: transparent;
     border: 2px solid var(--green);
@@ -117,6 +123,10 @@
     border-radius: 4px;
     cursor: pointer;
     margin-right: 12px;
+}
+
+.crud-modal__button-accept:hover {
+    background-color: var(--green);
 }
 
 .crud-modal-form {
@@ -141,4 +151,51 @@
 
 .crud-modal-buttons {
     margin-top: 24px;
+    align-self: center;
+}
+
+.crud-modal__wrapper {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.crud-modal__wrapper .crud-modal__info:nth-child(odd) {
+    margin-left: 0;
+} 
+
+.crud-modal__info {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin-left: 24px;
+}
+
+#modal_hours{
+    width: 15%;
+    margin-left: 24px;
+}
+
+#modal_hours__input {
+    height:100%
+}
+
+
+.react-datetime-picker__wrapper{
+    border: none;
+    color: var(--color-font-secundary);
+}
+
+.react-datetime-picker__inputGroup input {
+    color: var(--color-font-secundary);
+    outline: none;
+}
+
+.react-datetime-picker__clear-button svg,
+.react-datetime-picker__calendar-button svg{
+    stroke: var(--color-font-secundary);
+}
+
+.react-datetime-picker__clear-button svg:focus,
+.react-datetime-picker__calendar-button svg:focus{
+    stroke: var(--color-font-secundary);
 }
